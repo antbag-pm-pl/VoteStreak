@@ -40,5 +40,7 @@ class Main extends PluginBase implements Listener {
 
   }
   
-  pub 
+  public function onEnable(): void {
+    $this->streaks = new Config($this->getDataFolder() ."data/streaks.yml", Config::YAML);
+  } 
 }
