@@ -10,15 +10,14 @@ class Main extends PluginBase implements Listener {
   
   
   public function onLoad(): void {
-$this->saveDefaultConfig();
+    $this->saveDefaultConfig();
     $cfg = $this->getConfig();
     $cfgver = $cfg->get("Version");
     if ($cfgver !== 0.1){
       $this->getLogger()->warning("Warning: Config is Out of Date, please reinstall config");
-    }
     else {
-$this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
-    }
+    $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
+  }
     if($this->getServer()->getPluginManager()->getPlugin("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
       $this->Voting38 = true;
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
@@ -39,6 +38,8 @@ $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
   $this->getServer()->getPluginManager()->disablePlugin();
     }
 
-    }
-
   }
+  
+    
+   
+}
