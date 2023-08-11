@@ -3,4 +3,4 @@ author: [antbag, skyss0fly]
 version: 1.0.0
 api: 5.0.0
 description: "In Development"
-main: antbag\VoteStreak\Main
+main: antbag/VoteStreak/Main
