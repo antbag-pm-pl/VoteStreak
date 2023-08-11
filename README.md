@@ -16,4 +16,4 @@ A pocketmine [PMMP] pluign that allows to add vote streaks
 > /vstreak:manager opens manager ui
 > /streak:manager opens manager ui
 > # Supported
-> ( Voting38)[https://githb.com/kingofturkey38/voting38]
+ [Voting38](https://github.com/kingofturkey38/voting38)
