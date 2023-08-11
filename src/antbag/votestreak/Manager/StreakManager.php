@@ -7,11 +7,13 @@ final class StreakManager{
 public function AddStreak(){
   $v38 = $this->Voting38Listener();
   $voteevent = $v38()->onVote();
-  $DateTime = $this->DateTime();
+  $dateTine = $this->DateTime();
   $player = $voteevent->$player();
 $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $streak = $playerdata->get("Streak");
-  $data = $player->getUUID() . $streak . $DateTime->TimeNow();
+  $timenow = $dateTime->timeNow();
+  $puid = $player->getUUID();
+  $data = $puid . $streak . $timenow
   $playerdata->file_put_Contents($data);
 
 }
