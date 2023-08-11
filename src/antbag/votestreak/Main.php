@@ -13,7 +13,6 @@ class Main extends PluginBase implements Listener {
     if($this->getServer()->getPluginManager()->getPlugin("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
       $this->Voting38 = true;
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
-      
     }
   }
 }
