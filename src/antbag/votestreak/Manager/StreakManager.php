@@ -11,7 +11,7 @@ public function AddStreak(){
   $player = $voteevent->$player();
 $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $streak = $playerdata->get("Streak");
-  $data = $player->getUUID(); . $streak . $DateTime->TimeNow();
+  $data = $player->getUUID() . $streak . $DateTime->TimeNow();
   $playerdata->file_put_Contents($data);
 
 }
