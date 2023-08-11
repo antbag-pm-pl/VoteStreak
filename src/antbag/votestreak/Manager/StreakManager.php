@@ -21,7 +21,7 @@ $playerdata = $this->getDataFolder("PlayerData" . YAML);
 $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $streak = $playerdata->get("Streak");
    $DateTime = $this->DateTime();
-  $data = $player->getUUID(); . "0" .  $DateTime->TimeNow();
+  $data = $player->getUUID() . "0" .  $DateTime->TimeNow();
 $dateA = $this->addStreak()->$playerdata(); 
 
 
