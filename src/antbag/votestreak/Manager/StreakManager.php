@@ -14,7 +14,7 @@ $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $timenow = $dateTime->timeNow();
   $puid = $player->getUUID();
   $data = $puid . $streak . $timenow
-  $playerdata->file_put_Contents($data);
+  $playerdata()->file_put_Contents($data);
 
 }
  public function SetNil(){
