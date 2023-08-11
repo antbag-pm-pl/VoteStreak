@@ -31,4 +31,6 @@ if($timediff > 86400){
   $playerdata->file_put_Contents($data);
  
 }
+ }
+}
 
