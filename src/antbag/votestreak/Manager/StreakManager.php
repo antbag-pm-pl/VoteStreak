@@ -21,7 +21,7 @@ $playerdata = $this->getDataFolder("PlayerData" . YAML);
    $DateTime = $this->DateTime();
   $data = $player->getUUID(); . "0" .  $DateTime->TimeNow();
 $dateA = $this->addStreak()->$playerdata(); 
-// your second date coming from a mysql database (date fields)
+
 
     $dateB = $DateTime->TimeNow();
     $timediff = strtotime($dateA) - strtotime($dateB);
