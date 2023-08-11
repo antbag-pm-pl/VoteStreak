@@ -23,11 +23,9 @@ $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
       $this->Voting38 = true;
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
       $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Found Voting38!");
-      elseif ($this->getServer()->getPluginManager()->getPlugin("Voting38") == null && $this->getConfig()->get("Voting38") == false) {
+      if ($this->getServer()->getPluginManager()->getPlugin("Voting38") == null && $this->getConfig()->get("Voting38") == false) {
       $this->Voting38 = false;
-      $this->getLogger()->info(TEXTFORMAT::Red . "Caution: Voting38 not found. ". TEXTFORMAT::Orange . "But you got This option disabled so thats not too bad."
-                              );
-       
+      $this->getLogger()->info(TEXTFORMAT::Red . "Caution: Voting38 not found. ". TEXTFORMAT::Orange . "But you got This option disabled so thats not too bad.");
   }
     elseif ($this->getServer()->getPluginManager()->getPlugin("Voting38") != null && $this->getConfig()->get("Voting38") == false) {
       $this->Voting38 = false;
@@ -44,4 +42,3 @@ $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
     }
 
   }
-}
