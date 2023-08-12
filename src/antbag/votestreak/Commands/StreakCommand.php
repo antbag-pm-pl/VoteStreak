@@ -1,11 +1,11 @@
 <?php
 
-namespace antbag\votestreak\commands;
+namespace antbag\votestreak\Commands;
 
 use CortexPE\Commando\BaseCommand;
 use antbag\votestreak\commands\subcommands\TopStreakSubCommand;
 
-class Commands extends BaseCommand {
+class StreakCommand extends BaseCommand {
   
   public function onprepare(): void {
     $this->setPermission("");
