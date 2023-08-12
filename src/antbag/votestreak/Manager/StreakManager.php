@@ -1,6 +1,6 @@
 <?php
 
-namespace antbag\VoteStreak\Manager;
+namespace antbag\votestreak\Manager;
 
 use antbag\VoteStrek\Listeners\Voting38Listener;
 
