@@ -4,7 +4,7 @@ A pocketmine [PMMP] pluign that allows to add vote streaks
 *The following Information is Not Set in stone* ***Yet*** *please be weary of any changes*
 
 > # Information
->
+> 
 > # Configuration
 > You can set your rewards for each day through a form
 > # Permissions

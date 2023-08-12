@@ -7,10 +7,16 @@ use antbag\VoteStreak\Manager\StreakManager;
 
 class Voting38Listener implements Listener {
   
+  public function __construct(StreakManager $plugin) {
+    $this->plugin = $plugin;
+  }
+  
   public function onVote(PlayerVoteEvent $event) {
-   $player = $event()->getPlayer();
-   $addstreak = $this->StreakManager();
-   $player->addStreak();
+    $player = $event->getPlayer();
+    $this->plugin->addStreak($player);
+    # $player = $event()->getPlayer();
+    # $addstreak = $this->StreakManager();
+    # $player->addStreak();
   }
   
 }
