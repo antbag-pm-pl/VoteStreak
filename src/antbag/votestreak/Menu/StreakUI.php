@@ -4,7 +4,6 @@ namespace antbag\votestreak\Menu;
 
 use pocketmine\player\Player;
 use antbag\votestreak\StreakManager;
-
 class StreakUI {
   
   public function StreakUI(Player $player) {
@@ -14,7 +13,12 @@ class StreakUI {
       }
     });
     $form->setTitle("VoteStreaks");
-    $form->setContent("Your current VoteStrek: ");
+    $form->setContent("Your current VoteStrek: " $player->getStreak(););
     $form->sendToPlayer($player);
+  }
+  public function getStreak() {
+    $streakManager = $this->StreakManager();
+$this->getCurrentStreak($streakManager);
+    return true;
   }
 }
