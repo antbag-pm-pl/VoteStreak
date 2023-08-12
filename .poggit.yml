@@ -5,5 +5,5 @@ branches:
 projects:
   VoteStreak:
     path: ""
-    
+    libs:
 ...
