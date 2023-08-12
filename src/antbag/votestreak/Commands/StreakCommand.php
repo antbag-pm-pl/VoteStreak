@@ -1,6 +1,6 @@
 <?php
 
-namespace antbag\votestreak\Commands;
+namespace antbag\votestreak\commands;
 
 use CortexPE\Commando\BaseCommand;
 use antbag\votestreak\commands\subcommands\TopStreakSubCommand;
