@@ -13,12 +13,12 @@ class StreakUI {
       }
     });
     $form->setTitle("VoteStreaks");
-    $form->setContent("Your current VoteStrek: " $player->getStreak(););
+    $form->setContent("Your current VoteStrek: " .$player->getStreak());
     $form->sendToPlayer($player);
   }
   public function getStreak() {
     $streakManager = $this->StreakManager();
-$this->getCurrentStreak($streakManager);
+    $this->getCurrentStreak($streakManager);
     return true;
   }
 }

@@ -3,7 +3,8 @@
 namespace antbag\votestreak\Commands;
 
 use CortexPE\Commando\BaseCommand;
-use antbag\votestreak\
+use antbag\votestreak\commands\subcommands\TopStreakSubCommand;
+
 class Commands extends BaseCommand {
   
   public function onprepare(): void {
