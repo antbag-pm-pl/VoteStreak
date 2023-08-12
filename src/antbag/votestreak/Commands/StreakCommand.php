@@ -3,7 +3,7 @@
 namespace antbag\votestreak\Commands;
 
 use CortexPE\Commando\BaseCommand;
-
+use antbag\votestreak\
 class Commands extends BaseCommand {
   
   public function onprepare(): void {
