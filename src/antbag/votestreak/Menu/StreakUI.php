@@ -4,6 +4,8 @@ namespace antbag\votestreak\Menu;
 
 use pocketmine\player\Player;
 use antbag\votestreak\StreakManager;
+use jojoe77777\FormAPI\SimpleForm;
+
 class StreakUI {
   
   public function StreakUI(Player $player) {
