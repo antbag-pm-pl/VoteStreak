@@ -25,4 +25,18 @@ final class StreakManager {
   $data->save();
   }
   
+  public function onTopStreakPlayer(): ?string {
+    $data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
+    $allStreaks = $data->getAll();
+    
+    $topPlayer = null;
+    $topStreak = -1;
+    
+    foreach($allStreaks as $playerName => $streak) {
+      if($streak > $topStreak) {
+        $topStreak = $streak;
+        $topPlayer = $playerName;
+      }
+    }
+  }
 }
