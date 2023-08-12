@@ -18,7 +18,7 @@ class StreakUI {
   }
   public function getStreak() {
     $streakManager = $this->StreakManager();
-    $this->getCurrentStreak($streakManager);
+    $this->getCurrentStreak($streakManager, $player);
     return true;
   }
 }
