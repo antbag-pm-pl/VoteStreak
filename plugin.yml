@@ -2,4 +2,5 @@ name: VoteStreak
 author: [antbag, skyss0fly]
 version: 1.0.0
 api: 5.0.0
-description: 
+description: "In Development"
+main: antbag\votestreak\Main

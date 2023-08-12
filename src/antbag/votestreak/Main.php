@@ -3,7 +3,7 @@
 namespace antbag\votestreak;
 
 use pocketmine\plugin\PluginBase;
-
+use pocketmine\plugin\DisablePluginException;
 class Main extends PluginBase implements Listener {
   
   private $Voting38 = false;
@@ -15,6 +15,7 @@ class Main extends PluginBase implements Listener {
     $cfgver = $cfg->get("Version");
     if ($cfgver !== 0.1){
       $this->getLogger()->warning("Warning: Config is Out of Date, please reinstall config");
+    }
     else {
     $this->getLogger()->info(TEXTFORMAT::Green . "Successfully Loaded VoteStreak!");
   }
@@ -35,7 +36,7 @@ class Main extends PluginBase implements Listener {
   }
     else {
    $this->getLogger()->error("ERROR: Voting38 Not Found but Config has enabled. Disabling plugin");
-  $this->getServer()->getPluginManager()->disablePlugin();
+  throw new DisablePluginException;
     }
 
   }
