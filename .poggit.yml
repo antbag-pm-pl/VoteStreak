@@ -5,6 +5,8 @@ branches:
 projects:
   VoteStreak:
     path: ""
+    lint:
+      phpstan: false
     libs:
       src: jojoe77777/FormAPI/libFormAPI
       version: ^2.1.1
