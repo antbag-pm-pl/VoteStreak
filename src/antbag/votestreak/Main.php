@@ -4,6 +4,8 @@ namespace antbag\votestreak;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\DisablePluginException;
+use pocketmine\utils\Config;
+
 class Main extends PluginBase implements Listener {
   
   private $Voting38 = false;
@@ -42,6 +44,6 @@ class Main extends PluginBase implements Listener {
   }
   
   public function onEnable(): void {
-    $this->streaks = new Config($this->getDataFolder() ."data/streaks.yml", Config::YAML);
+    $this->streaks = new Config($this->getDataFolder() ."_data/streaks.yml", Config::YAML);
   } 
 }

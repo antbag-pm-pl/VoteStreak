@@ -3,8 +3,21 @@
 namespace antbag\VoteStreak;
 use antbag\VoteStrek\Listeners\Voting38Listener;
 use DateTime;
-final class StreakManager{
-public function AddStreak(){
+use pocketmine\player\Player;
+
+final class StreakManager {
+  
+  public function addStreak(Player $player) {
+    $name = $player->getName();
+    
+    $data = new Config($this->getDataFolder() ."_data/streaks.yml", Config::YAML);
+    $up = $data->get($name);
+    $data->set($name, $up + 1);
+    $data->save();
+  }
+  
+  
+/**public function AddStreak(){
   $v38 = $this->Voting38Listener();
   $voteevent = $v38()->onVote();
   $dateTine = $this->DateTime();
@@ -17,6 +30,8 @@ $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $playerdata()->file_put_Contents($data);
 
 }
+**/
+
  public function SetNil(){
 $playerdata = $this->getDataFolder("PlayerData" . YAML);
   $streak = $playerdata->get("Streak");
