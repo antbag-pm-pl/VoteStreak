@@ -3,7 +3,7 @@
 namespace antbag\votestreak\Commands;
 
 use CortexPE\Commando\BaseCommand;
-use antbag\votestreak\commands\subcommands\TopStreakSubCommand;
+use antbag\votestreak\Commands\subcommands\TopStreakSubCommand;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use antbag\votestreak\Menu\StreakUI;
