@@ -6,6 +6,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\DisablePluginException;
 use pocketmine\utils\Config;
 use CortexPE\Commando\PacketHooker;
+use antbag\votestreak\Listener\Voting38Listener;
+use antbag\votestreak\Commands\StreakCommand;
 
 class Main extends PluginBase implements Listener {
   
