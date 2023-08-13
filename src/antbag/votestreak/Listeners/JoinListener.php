@@ -12,7 +12,7 @@ public function onJoin($event PlayerJoinEvent): void {
 $player = $event->getPlayer();
   $ptime = $player->getCurrentStreak();
   $timeNow = $this->DateTime()->timeNow();
-  if ($ptime(TimeStamp); !<= $imenoww - 86400){
+  if ($ptime(TimeStamp); !<= $timenoww - 86400){
     $player->StreakManager()->updateStreak(0);
     }
 }
