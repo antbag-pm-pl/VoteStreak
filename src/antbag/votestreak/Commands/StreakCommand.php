@@ -27,20 +27,21 @@ class StreakCommand extends BaseCommand {
   }
   
   public function StreakUI(Player $player) {
+    $playerName = $player->getName();
+    
     $form = new SimpleForm(function(Player $player, int $data): void {
     if($data !== null) {
           
     }
     });
     $form->setTitle("VoteStreaks");
-    $form->setContent("Your current VoteStreak: " .$player->getStreak());
+    $form->setContent("Your current VoteStreak: " .$this->getStreak($playerName));
     $form->sendToPlayer($player);
   }
     
-    public function getStreak() {
-      $streakManager = $this->StreakManager();
-      $this->getCurrentStreak($streakManager, $player);
-      return true;
+    public function getStreak(string $playerName): int {
+      $data = new Config($this->getDataFolder() . "streaks.yml", Config::YAML);
+      return $data->get($playerName, 0);
     }
   
 }
