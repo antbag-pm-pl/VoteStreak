@@ -11,7 +11,7 @@ class StreakManager {
   public function addStreak(Player $player) {
     $playerName = $player->getName();
     $currentStreak = $this->getCurrentStreak($playerName); 
-    $timenow = $this->DateTime()->timeNow();
+    $timenow = $this->DateTime::getTimestamp;
     $newStreak = $currentStreak + 1 . $timenow;
     $this->updateStreak($playerName, $newStreak);
   }
