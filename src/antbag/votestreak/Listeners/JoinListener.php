@@ -11,8 +11,8 @@ class JoinListener implements Listener{
 public function onJoin(PlayerJoinEvent $event): void {
 $player = $event->getPlayer();
   $ptime = $player->getCurrentStreak();
-  $timeNow = $this->DateTime()->timeNow();
-  if ($ptime()->timeStamp() <= $timenoww - 86400){
+  $timeNow = $this->DateTime::getTimestamp();
+  if ($ptime()->timeStamp() <= $timeNow - 86400){
     $player->StreakManager()->updateStreak(0);
     }
 }
