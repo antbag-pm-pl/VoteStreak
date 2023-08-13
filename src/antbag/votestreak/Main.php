@@ -12,8 +12,10 @@ use antbag\votestreak\Commands\StreakCommand;
 class Main extends PluginBase {
   
   private $Voting38 = false;
+  public static $instance;
       // Enable Function
   public function onEnable(): void {
+    self::$instance = $this;
     $streaks = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
     if(!PacketHooker::isRegistered()) {
       PacketHooker::register($this);
@@ -25,5 +27,9 @@ class Main extends PluginBase {
     } else {
       $this->getLogger("You need to enable Voting38 in conifg in order to make this plugin work");
     }
-  } 
+  }
+  
+  public static function getInstance(): Main {
+          return self::$instance;
+      }
 }
