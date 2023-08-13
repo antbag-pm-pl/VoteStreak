@@ -2,7 +2,7 @@
 
 namespace antbag\votestreak\Manager;
 
-use antbag\VoteStrek\Listeners\Voting38Listener;
+use antbag\VoteStreak\Listeners\Voting38Listener;
 use pocketmine\utils\Config;
 
 class StreakManager {
