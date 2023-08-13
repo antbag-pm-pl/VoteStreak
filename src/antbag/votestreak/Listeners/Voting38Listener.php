@@ -10,7 +10,7 @@ class Voting38Listener implements Listener {
   
   public function onVote(PlayerVoteEvent $event) {
     $player = $event->getPlayer();
-    
+    StreakManager::addStreak($player);
     # $player = $event()->getPlayer();
     # $addstreak = $this->StreakManager();
     # $player->addStreak();
