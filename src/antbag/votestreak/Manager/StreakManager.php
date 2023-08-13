@@ -4,14 +4,13 @@ namespace antbag\votestreak\Manager;
 
 use antbag\VoteStreak\Listeners\Voting38Listener;
 use pocketmine\utils\Config;
-use DateTime;
+
 class StreakManager {
   
 
   public function addStreak(Player $player) {
     $playerName = $player->getName();
-    $currentStreak = $this->getCurrentStreak($playerName); 
-    $timenow = $this->DateTime::getTimestamp;
+    $currentStreak = $this->getCurrentStreak($playerName);
     $newStreak = $currentStreak + 1 . $timenow;
     $this->updateStreak($playerName, $newStreak);
   }
@@ -27,7 +26,7 @@ class StreakManager {
   $data->save();
   }
   
-  public function onTopStreakPlayer(): ?string {
+  public function getPlayerWithTopStreak(): ?string {
     $data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
     $allStreaks = $data->getAll();
     

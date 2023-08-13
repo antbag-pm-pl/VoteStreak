@@ -12,7 +12,7 @@ use jojoe77777\FormAPI\SimpleForm;
 class StreakCommand extends BaseCommand {
   
   
-  public function onprepare(): void {
+  public function prepare(): void {
     $this->setPermission("votestreak.streak.command");
     $this->registerSubCommand(new TopStreakSubCommand("top", "A commad to check The top player streak"));
   }
