@@ -13,7 +13,10 @@ class StreakCommand extends BaseCommand {
   
   
   public function prepare(): void {
-    $this->setPermission("votestreak.streak.command");
+    $this->setPermission(
+      "votestreak.streak.command;".
+      "votestreak.top.command"
+      );
     $this->registerSubCommand(new TopStreakSubCommand("top", "A commad to check The top player streak"));
   }
   
