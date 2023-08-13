@@ -8,10 +8,10 @@ projects:
     lint:
       phpstan: false
     libs:
-    FormAPI:
-      src: jojoe77777/FormAPI/libFormAPI
-      version: ^2.1.1
-    Commando:
-      src: ACM-PocketMine-MP/Commando/Commando
-      version: ^3.2.1
+      FormAPI:
+        src: jojoe77777/FormAPI/libFormAPI
+        version: ^2.1.1
+      Commando:
+        src: ACM-PocketMine-MP/Commando/Commando
+        version: ^3.2.1
 ...
