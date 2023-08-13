@@ -8,7 +8,7 @@ use pocketmine\Command\Command;
 use pocketmine\Command\CommandSender;
 use antbag\votestreak\Manager\StreakManager;
 
-class TopStreakSubCommand implements SubCommand {
+class TopStreakSubCommand extends BaseSubCommand {
   
   public function prepare(): void {
     $this->setPermission("votestreak.top.command");
