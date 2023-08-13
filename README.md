@@ -1,5 +1,5 @@
 # VoteStreak
-A pocketmine [PMMP] pluign that allows to add vote streaks
+A pocketmine [PMMP] plugin that allows to add vote streaks
 # Welcome to VoteStreak
 *The following Information is Not Set in stone* ***Yet*** *please be weary of any changes*
 
