@@ -9,7 +9,7 @@ use CortexPE\Commando\PacketHooker;
 use antbag\votestreak\Listener\Voting38Listener;
 use antbag\votestreak\Commands\StreakCommand;
 
-class Main extends PluginBase implements Listener {
+class Main extends PluginBase {
   
   private $Voting38 = false;
   
