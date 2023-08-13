@@ -8,7 +8,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use antbag\votestreak\Menu\StreakUI;
 
-class StreakCommand extends BaseCommand {
+class StreakCommand implements BaseCommand {
   
   public function __construct(StreakUI $plugin) {
     $this->plugin = $plugin;
