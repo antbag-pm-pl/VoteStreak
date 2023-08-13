@@ -3,8 +3,9 @@
 namespace antbag\votestreak\Manager;
 
 use antbag\VoteStrek\Listeners\Voting38Listener;
+use pocketmine\utils\Config;
 
-final class StreakManager {
+class StreakManager {
   
 
   public function addStreak(Player $player) {
