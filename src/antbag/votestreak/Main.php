@@ -52,5 +52,6 @@ class Main extends PluginBase implements Listener {
     if(!PacketHooker::isRegistered()) {
       PacketHooker::register($this);
     }
+    $this->getServer()->getCommandMap()->register("streak", new StreakCommand($this, "streak", "See your streaks"));
   } 
 }
