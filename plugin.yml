@@ -5,3 +5,9 @@ api: 5.0.0
 description: "In Development"
 main: antbag\votestreak\Main
 soft-depend: ["Voting38"]
+
+permission:
+  votestreak.streak.command:
+    default: true
+  votestreak.top.command:
+    default: true
