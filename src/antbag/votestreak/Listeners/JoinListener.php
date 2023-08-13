@@ -7,7 +7,7 @@ use pocketmine\event\Listener;
 use antbag\votestreak\Manager\StreakManager;
 use DateTime;
 
-final class JoinListener implements Listener{
+class JoinListener implements Listener{
 public function onJoin($event PlayerJoinEvent): void {
 $player = $event->getPlayer();
   $ptime = $player->getCurrentStreak();
