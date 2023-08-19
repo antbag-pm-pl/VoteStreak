@@ -11,11 +11,12 @@ use antbag\votestreak\Commands\StreakCommand;
 class Main extends PluginBase {
   
   private $Voting38 = false;
+  private $data;
   public static $instance;
-      // Enable Function
+
   public function onEnable(): void {
     self::$instance = $this;
-    $streaks = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
+    $this->data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
     if(!PacketHooker::isRegistered()) {
       PacketHooker::register($this);
     }
@@ -28,10 +29,6 @@ class Main extends PluginBase {
     }
   }
   
-  public static function getInstance(): Main {
-  return self::$instance;
-  }
-  
   public function addStreak(Player $player) {
     $playerName = $player->getName();
     $currentStreak = $this->getCurrentStreak($playerName);
@@ -40,29 +37,15 @@ class Main extends PluginBase {
   }
     
   public function getCurrentStreak(string $playerName): int {
-    $data = new Config($this->getDataFolder() . "streaks.yml", Config::YAML);
-    return $data->get($playerName, 0);
+    return this->data->get($playerName, 0);
   }
     
   public function updateStreak(string $playerName, int $newStreak): void {
-    $data = new Config($this->getDataFolder() . "streaks.yml", Config::YAML);
-    $data->set($playerName, $newStreak);
-    $data->save();
+    $this->data->set($playerName, $newStreak);
+    $this->data->save();
   }
-    
-  public function getPlayerWithTopStreak(): ?string {
-    $data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
-    $allStreaks = $data->getAll();
-      
-    $topPlayer = null;
-    $topStreak = -1;
-      
-    foreach($allStreaks as $playerName => $streak) {
-      if($streak > $topStreak) {
-        $topStreak = $streak;
-        $topPlayer = $playerName;
-        }
-      }
-    }
-  
+
+  public static function getInstance(): Main {
+    return self::$instance;
+  }
 }
