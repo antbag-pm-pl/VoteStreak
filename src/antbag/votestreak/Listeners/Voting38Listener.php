@@ -3,14 +3,14 @@
 namespace antbag\votestreak\Listeners;
 
 use kingofturkey38\voting38\events\PlayerVoteEvent;
-use antbag\VoteStreak\Manager\StreakManager;
+use antbag\votestreak\Main;
 
 class Voting38Listener implements Listener {
   
   
   public function onVote(PlayerVoteEvent $event) {
     $player = $event->getPlayer();
-    StreakManager::addStreak($player);
+    Main::getInstance()->addStreak($player);
     # $player = $event()->getPlayer();
     # $addstreak = $this->StreakManager();
     # $player->addStreak();

@@ -3,10 +3,9 @@
 namespace antbag\votestreak;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\plugin\DisablePluginException;
 use pocketmine\utils\Config;
 use CortexPE\Commando\PacketHooker;
-use antbag\votestreak\Listener\Voting38Listener;
+use antbag\votestreak\Listeners\Voting38Listener;
 use antbag\votestreak\Commands\StreakCommand;
 
 class Main extends PluginBase {
@@ -32,4 +31,38 @@ class Main extends PluginBase {
   public static function getInstance(): Main {
   return self::$instance;
   }
+  
+  public function addStreak(Player $player) {
+    $playerName = $player->getName();
+    $currentStreak = $this->getCurrentStreak($playerName);
+    $newStreak = $currentStreak + 1 . $timenow;
+    $this->updateStreak($playerName, $newStreak);
+  }
+    
+  public function getCurrentStreak(string $playerName): int {
+    $data = new Config($this->getDataFolder() . "streaks.yml", Config::YAML);
+    return $data->get($playerName, 0);
+  }
+    
+  public function updateStreak(string $playerName, int $newStreak): void {
+    $data = new Config($this->getDataFolder() . "streaks.yml", Config::YAML);
+    $data->set($playerName, $newStreak);
+    $data->save();
+  }
+    
+  public function getPlayerWithTopStreak(): ?string {
+    $data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
+    $allStreaks = $data->getAll();
+      
+    $topPlayer = null;
+    $topStreak = -1;
+      
+    foreach($allStreaks as $playerName => $streak) {
+      if($streak > $topStreak) {
+        $topStreak = $streak;
+        $topPlayer = $playerName;
+        }
+      }
+    }
+  
 }
