@@ -21,7 +21,7 @@ class StreakCommand extends BaseCommand {
   
   public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {
     if($sender instanceof Player) {
-      
+      $sender->sendMessage("You must be a player to run this command");
     }
     if($sender->hasPermission("votestreak.streak.command")) {
       $this->StreakUI($sender);

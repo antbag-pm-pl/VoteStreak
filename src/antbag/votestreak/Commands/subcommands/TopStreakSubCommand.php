@@ -16,8 +16,7 @@ class TopStreakSubCommand extends BaseSubCommand {
   
   public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {
     if($sender instanceof Player) {
-    
-    $topPlayer = 
+    $sender->sendMessage("You must be in-game to run this command");
     }
     if($sender->hasPermission("votestreak.top.command")) {
       if($topPlayer !== null) {
