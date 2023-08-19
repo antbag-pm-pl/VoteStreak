@@ -3,7 +3,6 @@
 namespace antbag\votestreak\Commands;
 
 use CortexPE\Commando\BaseCommand;
-use antbag\votestreak\Commands\subcommands\TopStreakSubCommand;
 use pocketmine\command\CommandSender;
 use antbag\votestreak\Main;
 use jojoe77777\FormAPI\SimpleForm;
@@ -12,11 +11,7 @@ class StreakCommand extends BaseCommand {
   
   
   public function prepare(): void {
-    $this->setPermission(
-      "votestreak.streak.command;".
-      "votestreak.top.command"
-      );
-    $this->registerSubCommand(new TopStreakSubCommand("top", "A commad to check The top player streak"));
+    $this->setPermission("votestreak.streak.command");
   }
   
   public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {

@@ -1,8 +1,9 @@
 name: VoteStreak
-author: [antbag, skyss0fly]
+authors: [antbag, skyss0fly]
 version: 1.0.0
 api: 5.0.0
 description: "In Development"
+website: "https://github.com/antbag-pm-pl/VoteStreak"
 main: antbag\votestreak\Main
 soft-depend: ["Voting38"]
 

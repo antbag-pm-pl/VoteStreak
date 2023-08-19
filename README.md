@@ -1,18 +1,25 @@
-# VoteStreak
-A pocketmine [PMMP] plugin that allows to add vote streaks
-# Welcome to VoteStreak
-*The following Information is Not Set in stone* ***Yet*** *please be weary of any changes*
-
 # Information
-# Configuration
-You can set your rewards for each day through a form
+You can add votestreaks to your server. Whenever a person in your server votes he get a streak and if he didn't vote in the last 12 hours his streak' get reset.
 # Permissions
-VoteStreak.streak
-VoteStreak.manager
-> # Commands
-> /streak opens streak ui
-> /vstreak opens streak ui
-> /vstreak:manager opens manager ui
-> /streak:manager opens manager ui
-> # Supported
+- `votestreak.command.streak`
+- `votestreak.command.top`
+
+# Commands
+- /streak opens streak ui
+- /vstreak opens streak ui
+
+# To-do list
+- [ ] Make it so it checks if player has voted in last 12 hours
+- [ ] Rewards when player hits x amount of votestreaks
+- [ ] Add a ingame command to reset a player's streak
+- [ ] Add a command to check the streak leaderboard
+
+# Supported
  [Voting38](https://github.com/kingofturkey38/voting38)
+
+# Issues
+- For issues/suggestions related to this plugin open a issue [here](https://github.com/antbag-pm-pl/VoteStreak/Issues)
+# Credits
+- [antbag-dev](https://github.com/antbag-pm-pl) Explicit owner of the repo
+ 
+- [skyss0fly](https://github.com/skyss0fly) Developed Most of the plugin
