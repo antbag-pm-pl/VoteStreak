@@ -22,4 +22,4 @@ You can add votestreaks to your server. Whenever a person in your server votes h
 # Credits
 - [antbag-dev](https://github.com/antbag-pm-pl) Explicit owner of the repo
  
-- [skyss0fly](https://github.com/skyss0fly) Developed Most of the plugin
+- [skyss0fly](https://github.com/skyss0fly) Developed Most of the plugin (by developed you mean i did a ton of coding and of that a ton of issues occured which took a bit to cleanup)
