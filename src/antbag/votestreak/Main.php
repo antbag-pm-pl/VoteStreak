@@ -37,7 +37,7 @@ class Main extends PluginBase {
   }
     
   public function getCurrentStreak(string $playerName): int {
-    return this->data->get($playerName, 0);
+    return $this->data->get($playerName, 0);
   }
     
   public function updateStreak(string $playerName, int $newStreak): void {
