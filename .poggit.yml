@@ -4,6 +4,7 @@ branches:
 - main
 projects:
   VoteStreak:
+    icon: "signaling.gif"
     path: ""
     lint:
       phpstan: false
