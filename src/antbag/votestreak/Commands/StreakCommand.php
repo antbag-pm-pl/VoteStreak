@@ -6,6 +6,7 @@ use CortexPE\Commando\BaseCommand;
 use pocketmine\command\CommandSender;
 use antbag\votestreak\Main;
 use jojoe77777\FormAPI\SimpleForm;
+use Pocketmine\Utils\TextFormat;
 
 class StreakCommand extends BaseCommand {
   
@@ -16,7 +17,7 @@ class StreakCommand extends BaseCommand {
   
   public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {
     if($sender instanceof Player) {
-      $sender->sendMessage("You must be a player to run this command");
+      $sender->sendMessage(TEXTFORMAT::RED . TEXTFORMAT::BOLD . "You must be a player to run this command");
     }
     if($sender->hasPermission("votestreak.streak.command")) {
       $this->StreakUI($sender);
@@ -32,7 +33,7 @@ class StreakCommand extends BaseCommand {
     }
     });
     $form->setTitle("VoteStreaks");
-    $form->setContent("Your current VoteStreak: " .Main::getInstance()->getCurrentStreak($Name));
+    $form->setContent("Your current VoteStreak: " . TEXTFORMAT::YELLOW . Main::getInstance()->getCurrentStreak($Name));
     $form->sendToPlayer($player);
   }
  
