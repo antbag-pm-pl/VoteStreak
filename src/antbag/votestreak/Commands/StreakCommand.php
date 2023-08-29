@@ -6,7 +6,7 @@ use CortexPE\Commando\BaseCommand;
 use pocketmine\command\CommandSender;
 use antbag\votestreak\Main;
 use jojoe77777\FormAPI\SimpleForm;
-use Pocketmine\Utils\TextFormat;
+use pocketmine\Utils\TextFormat;
 
 class StreakCommand extends BaseCommand {
   
