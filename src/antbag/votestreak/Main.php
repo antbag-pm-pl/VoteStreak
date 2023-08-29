@@ -20,7 +20,7 @@ class Main extends PluginBase {
     if(!PacketHooker::isRegistered()) {
       PacketHooker::register($this);
     }
-    $this->getServer()->getCommandMap()->register("streak", new StreakCommand($this, "streak", "See your streaks"));
+    $this->getServer()->getCommandMap()->register("VoteStreak", new StreakCommand($this, "streak", "See your streaks"));
     
     if($this->getServer()->getPluginManager()->get("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
