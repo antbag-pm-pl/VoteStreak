@@ -25,7 +25,7 @@ class Main extends PluginBase {
     if($this->getServer()->getPluginManager()->get("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
     } else {
-      $this->getLogger("You need to enable Voting38 in conifg in order to make this plugin work");
+      $this->getLogger()->warning("You need to enable Voting38 in conifg in order to make this plugin work");
     }
   }
   
