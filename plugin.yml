@@ -2,7 +2,7 @@ name: VoteStreak
 authors: [antbag, skyss0fly]
 version: 1.0.0
 api: 5.0.0
-description: "In Development"
+description: "A plugin that allows you too add votestreaks to your server"
 website: "https://github.com/antbag-pm-pl/VoteStreak"
 main: antbag\votestreak\Main
 soft-depend: ["Voting38"]
@@ -10,5 +10,5 @@ soft-depend: ["Voting38"]
 permission:
   votestreak.streak.command:
     default: true
-  votestreak.top.command:
-    default: true
+  votestreak.reset.command:
+    default: op
