@@ -21,7 +21,6 @@ class Main extends PluginBase {
       PacketHooker::register($this);
     }
     $this->getServer()->getCommandMap()->register("VoteStreak", new StreakCommand($this, "streak", "See your streaks"));
-    
     if($this->getServer()->getPluginManager()->get("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
     } else {
@@ -32,8 +31,12 @@ class Main extends PluginBase {
   public function addStreak(Player $player) {
     $playerName = $player->getName();
     $currentStreak = $this->getCurrentStreak($playerName);
-    $newStreak = $currentStreak + 1 . $timenow;
+    $newStreak = $currentStreak + 1;
     $this->updateStreak($playerName, $newStreak);
+  }
+  
+  public function resetStreak(string $playerName): int {
+    $this->data->set($playerName, 0);
   }
     
   public function getCurrentStreak(string $playerName): int {

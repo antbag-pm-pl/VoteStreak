@@ -1,12 +1,12 @@
 # Information
 You can add votestreaks to your server. Whenever a person in your server votes he get a streak and if he didn't vote in the last 12 hours his streak' get reset.
 # Permissions
-- `votestreak.command.streak`
-- `votestreak.command.top`
+- `votestreak.streak.command`
+- `votestreak.reset.command`
 
 # Commands
 - /streak opens streak ui
-- /vstreak opens streak ui
+- /streak reset [player] reset's player streak
 
 # To-do list
 - [ ] Make it so it checks if player has voted in last 12 hours
@@ -22,4 +22,4 @@ You can add votestreaks to your server. Whenever a person in your server votes h
 # Credits
 - [antbag-dev](https://github.com/antbag-pm-pl) Explicit owner of the repo
  
-- [skyss0fly](https://github.com/skyss0fly) Developed Most of the plugin (by developed you mean i did a ton of coding and of that a ton of issues occured which took a bit to cleanup)
+- [skyss0fly](https://github.com/skyss0fly) Developed Most of the plugin

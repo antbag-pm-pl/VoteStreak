@@ -6,26 +6,26 @@ use pocketmine\command\CommandSender;
 use CortexPE\Commando\BaseSubCommand;
 use pocketmine\player\Player;
 
-class ResetCommand extends BaseSubCommand {
+class ResetSubCommand extends BaseSubCommand {
 
     protected function prepare(): void {
-        $this->setPermission("votestreak.reset.command");
-        $this->registerArgument(0, new RawStringArgument("player", true));
+      $this->setPermission("votestreak.reset.command");
+      $this->registerArgument(0, new RawStringArgument("player", true));
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {
-        if(isset($args["player"])){
-            $playerName = $args["player"];
-            $player = $this->getPlugin()->getServer()->getPlayerExact($playerName);
+      if(isset($args["player"])){
+        $playerName = $args["player"];
+        $player = $this->getPlugin()->getServer()->getPlayerExact($playerName);
             
-            if($player !== null){
-                Main::getInstance()->resetStreak($playerName);
-                $sender->sendMessage("Reset the streak for " . $playerName);
-            } else {
-                $sender->sendMessage("Player " . $playerName . " is not online.");
-            }
+        if($player !== null){
+            Main::getInstance()->resetStreak($playerName);
+            $sender->sendMessage("Reset the streak for " . $playerName);
         } else {
-            $this->sendUsage();
+            $sender->sendMessage("Player " . $playerName . " is not online.");
         }
+    } else {
+        $sender->sendMessage("The player you typed appears to be unknown or not online");
     }
+  }
 }
