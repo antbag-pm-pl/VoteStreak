@@ -13,6 +13,7 @@ class StreakCommand extends BaseCommand {
   
   public function prepare(): void {
     $this->setPermission("votestreak.streak.command");
+    $this->registerSubCommand(new ResetSubCommand('reset', 'reset a streak of a user'));
   }
   
   public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void {
