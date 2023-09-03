@@ -20,12 +20,12 @@ class ResetSubCommand extends BaseSubCommand {
             
         if($player !== null){
             Main::getInstance()->resetStreak($playerName);
-            $sender->sendMessage("Reset the streak for " . $playerName);
+            $sender->sendMessage("§aReset the streak for " . $playerName);
         } else {
-            $sender->sendMessage("Player " . $playerName . " is not online.");
+            $sender->sendMessage("§cPlayer " . $playerName . " is not online.");
         }
     } else {
-        $sender->sendMessage("The player you typed appears to be unknown or not online");
+        $sender->sendMessage("§cThe player you typed appears to be unknown or not online");
     }
   }
 }
