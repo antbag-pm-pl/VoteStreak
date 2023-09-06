@@ -36,6 +36,7 @@ class StreakCommand extends BaseCommand {
     $form->setTitle("VoteStreaks");
     $form->setContent("Your current VoteStreak: " . TEXTFORMAT::YELLOW . Main::getInstance()->getCurrentStreak($Name));
     $form->sendToPlayer($player);
+    return $form;
   }
  
 }
