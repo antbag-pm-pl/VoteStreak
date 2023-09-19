@@ -5,6 +5,7 @@ namespace antbag\votestreak\Commands\subcommands;
 use pocketmine\command\CommandSender;
 use CortexPE\Commando\BaseSubCommand;
 use pocketmine\player\Player;
+use CortexPE\Commando\args\RawStringArgument;
 
 class ResetSubCommand extends BaseSubCommand {
 
