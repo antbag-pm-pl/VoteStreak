@@ -30,6 +30,7 @@ class Main extends PluginBase {
     $this->getServer()->getCommandMap()->register("VoteStreak", new StreakCommand($this, "streak", "See your streaks"));
     if (!class_exists(Voting38::class)) {
      $this->getLogger()->notice('Voting38 is required to run this plugin..');
+     $this->getServer()->getPluginManager()->disablePlugin($this);
     }else{
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
     }  
