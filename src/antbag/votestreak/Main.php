@@ -8,24 +8,31 @@ use CortexPE\Commando\PacketHooker;
 use antbag\votestreak\Listeners\Voting38Listener;
 use antbag\votestreak\Commands\StreakCommand;
 use pocketmine\player\Player;
+use kingofturkey38\voting38\Main as Voting38;
+
 class Main extends PluginBase {
   
   private $Voting38 = false;
   private $data;
   public static $instance;
 
+  public function onLoad(): void
+    {
+        self::$instance = $this;
+        $this->saveDefaultConfig();
+    }
+  
   public function onEnable(): void {
-    self::$instance = $this;
     $this->data = new Config($this->getDataFolder() ."streaks.yml", Config::YAML);
     if(!PacketHooker::isRegistered()) {
       PacketHooker::register($this);
     }
     $this->getServer()->getCommandMap()->register("VoteStreak", new StreakCommand($this, "streak", "See your streaks"));
-    if($this->getServer()->getPluginManager()->get("Voting38") != null && $this->getConfig()->get("Voting38") == true) {
+    if (!class_exists(Voting38::class)) {
+     $this->getLogger()->notice('Voting38 is required to run this plugin..');
+    }else{
       $this->getServer()->getPluginManager()->registerEvents(new Voting38Listener($this), $this);
-    } else {
-      $this->getLogger()->warning("You need to enable Voting38 in config in order to make this plugin work");
-    }
+    }  
   }
   
   public function addStreak(Player $player) {
