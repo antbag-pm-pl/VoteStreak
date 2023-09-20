@@ -7,7 +7,7 @@ use pocketmine\utils\Config;
 use CortexPE\Commando\PacketHooker;
 use antbag\votestreak\Listeners\Voting38Listener;
 use antbag\votestreak\Commands\StreakCommand;
-
+use pocketmine\player\Player;
 class Main extends PluginBase {
   
   private $Voting38 = false;

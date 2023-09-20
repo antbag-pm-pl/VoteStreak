@@ -5,7 +5,7 @@ api: 5.0.0
 description: "A plugin that allows you too add votestreaks to your server"
 website: "https://github.com/antbag-pm-pl/VoteStreak"
 main: antbag\votestreak\Main
-soft-depend: ["Voting38"]
+depend: ["Voting38"]
 
 permission:
   votestreak.streak.command:
