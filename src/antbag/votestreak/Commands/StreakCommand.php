@@ -8,7 +8,7 @@ use antbag\votestreak\Main;
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\utils\TextFormat;
 use antbag\votestreak\Commands\subcommands\ResetSubCommand;
-
+use pocketmine\player\Player;
 class StreakCommand extends BaseCommand {
   
   
