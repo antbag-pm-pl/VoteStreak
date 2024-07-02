@@ -1,7 +1,7 @@
 name: VoteStreak
 authors: [antbag, skyss0fly]
 version: 1.0.0
-api: 5.0.0
+api: "5.3.0"
 description: "A plugin that allows you too add votestreaks to your server"
 website: "https://github.com/antbag-pm-pl/VoteStreak"
 main: antbag\votestreak\Main
