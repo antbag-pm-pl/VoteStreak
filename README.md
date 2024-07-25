@@ -15,7 +15,12 @@ You can add votestreaks to your server. Whenever a person in your server votes h
 - [ ] Add a command to check the streak leaderboard
 
 # Supported
- [Voting38](https://github.com/kingofturkey38/voting38)
+> [!NOTE]
+> VoteStreak will **__Not__** be supporting *TopVoter* due to it being an Out of Date / Deprecated Plugin
+> yours truly skyss0fly.
+
+
+- [Voting38](https://github.com/kingofturkey38/voting38)
 
 # Issues
 - For issues/suggestions related to this plugin open a issue [here](https://github.com/antbag-pm-pl/VoteStreak/Issues)
@@ -23,3 +28,4 @@ You can add votestreaks to your server. Whenever a person in your server votes h
 - [antbag-dev](https://github.com/antbag-dev)
  
 - [skyss0fly](https://github.com/skyss0fly)
+- [skyss0fly-pm-pl](https://github.com/skyss0fly-pm-pl)
