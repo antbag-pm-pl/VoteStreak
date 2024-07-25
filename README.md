@@ -1,5 +1,9 @@
 # Information
 You can add votestreaks to your server. Whenever a person in your server votes he get a streak and if he didn't vote in the last 12 hours his streak' get reset.
+# For Server Administrators:
+A quick note. your player has to be online in the server and have joined at __least__ once with this plugin installed to reset their streak. otherwise you cannot modify streaks. 
+(sigh. thats annoying. we will eventually find a fix to this)
+
 # Permissions
 - `votestreak.streak.command`
 - `votestreak.reset.command`
