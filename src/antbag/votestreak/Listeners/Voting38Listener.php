@@ -11,11 +11,7 @@ class Voting38Listener implements Listener {
   public function onVote(PlayerVoteEvent $event) {
     $player = $event->getPlayer();
     Main::getInstance()->addStreak($player);
-    /*
-    $player = $event()->getPlayer();
-    $addstreak = $this->StreakManager();
-     $player->addStreak();
-     */
+  
   }
   
 }
