@@ -4,6 +4,9 @@ You can add votestreaks to your server. Whenever a person in your server votes h
 A quick note. your player has to be online in the server and have joined at __least__ once with this plugin installed to reset their streak. otherwise you cannot modify streaks. 
 (sigh. thats annoying. we will eventually find a fix to this)
 
+# For Developers:
+this plugin has an extensive api so at the moment we havent introduced the todo features but with our api you can do whatever you want already. have fun:)
+
 # Permissions
 - `votestreak.streak.command`
 - `votestreak.reset.command`
